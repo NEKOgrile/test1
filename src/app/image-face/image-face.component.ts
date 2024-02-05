@@ -24,4 +24,19 @@ export class ImageFaceComponent {
    
   }
 
+  onNoteeMore() {
+    if(this.faceSnap.note < 20)
+    {
+      this.faceSnap.note++;
+    }
+
+
+  }
+  onNoteLess() {
+    if (this.faceSnap.note > 0) {
+      this.faceSnap.note--;
+    }
+   
+  }
+
 }

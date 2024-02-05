@@ -1,4 +1,4 @@
-<div class="face-snap-card" [ngClass]="{ 'snapped': faceSnap.NEpisodeValide !== 0}">
+<div class="face-snap-card" [ngClass]="{ 'snapped': faceSnap.NEpisodeValide !== 0}" [ngClass]="{ 'valide': faceSnap.NEpisodeValide == faceSnap.NEpisode}">
     <h2>{{ faceSnap.title }}</h2>
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <p>{{ faceSnap.description }}</p>
@@ -8,6 +8,8 @@
 
     <p *ngIf="faceSnap.NEpisodeValide > 0"><button (click)="onEpisodeLess()">-</button> {{ faceSnap.NEpisodeValide }} / {{faceSnap.NEpisode}} <button (click)="onEpisodeMore()">+</button></p>
     <p *ngIf="faceSnap.NEpisodeValide == 0"><button (click)="onEpisodeMore()">EP 1 validé</button></p>
+    <p *ngIf="faceSnap.NEpisodeValide == faceSnap.NEpisode">Note</p>
+    <p *ngIf="faceSnap.NEpisodeValide == faceSnap.NEpisode"><button (click)="onNoteLess()">-</button> {{ faceSnap.note }} / 20 <button (click)="onNoteeMore()">+</button></p>
 
     <!--<p><button>Oh Snap!</button> 🤌 {{ faceSnap.note }}</p>-->
     

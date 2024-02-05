@@ -31,6 +31,16 @@ export class AppComponent {
         NEpisode: 20,
         NEpisodeValide: 0,
       },
+      {
+        title: 'asbin hotel',
+        description: 'bla bla bla bla bla',
+        avies: 'trop bien wola',
+        note: 8,
+        imageUrl:
+          'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
+        NEpisode: 2,
+        NEpisodeValide: 0,
+      },
     ];
   }
 }
