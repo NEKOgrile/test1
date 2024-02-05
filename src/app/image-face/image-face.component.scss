@@ -38,3 +38,15 @@
         }
     }
 }
+
+.snapped {
+    background-color: rgba(rgb(157, 157, 157), 0.4);
+    color: rgb(28, 28, 28);
+    button {
+      box-shadow: rgb(232, 232, 232) 3px 3px 7px;
+      color: rgb(0, 0, 0);
+      &:active {
+        box-shadow: lightgreen 0 0 5px;
+      }
+    }
+  }
