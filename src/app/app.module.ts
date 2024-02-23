@@ -7,6 +7,7 @@ import { ImageFaceComponent } from './image-face/image-face.component';
 import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     ImageFaceComponent,
     FaceSnapListComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

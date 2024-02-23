@@ -7,6 +7,7 @@ import { FaceSnap } from '../models/face-snap.model';
 export class FaceSnapsService {
     faceSnaps: FaceSnap[] = [
         {
+          id: 1,
           title: 'TOH',
           description: 'bla bla bla bla bla',
           avies: 'trop bien wola',
@@ -17,6 +18,7 @@ export class FaceSnapsService {
           NEpisodeValide: 0,
         },
         {
+          id: 2,
           title: 'shera',
           description: 'bla bla bla bla bla',
           avies: 'trop bien wola',
@@ -27,6 +29,7 @@ export class FaceSnapsService {
           NEpisodeValide: 0,
         },
         {
+          id: 3,
           title: 'asbin hotel',
           description: 'bla bla bla bla bla',
           avies: 'trop bien wola',
@@ -42,4 +45,17 @@ export class FaceSnapsService {
         return this.faceSnaps;
     }
 
+    getFaceSnapById(faceSnapId: number): FaceSnap {
+      const faceSnap = this.faceSnaps.find(faceSnap => faceSnap.id === faceSnapId);
+      if (!faceSnap) {
+          throw new Error('FaceSnap not found!');
+      } else {
+          return faceSnap;
+      }
+    }
+
+    snapFaceSnapById(faceSnapId: number, snapType: 'snap' | 'unsnap'): void {
+      const faceSnap = this.getFaceSnapById(faceSnapId);
+      snapType === 'snap' ? faceSnap.NEpisodeValide++ : faceSnap.NEpisodeValide--;
+  }
 }
