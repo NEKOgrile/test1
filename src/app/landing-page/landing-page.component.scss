@@ -1,8 +1,9 @@
 .landing-block {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
   }
   
   .landing-links {
@@ -12,4 +13,11 @@
 
   button{
     font-size: 20px;
+  }
+
+  img{
+
+    flex: 0 0 30%; /* Les images prennent 30% de l'espace du conteneur, mais ne se rétrécissent pas ni ne grandissent */
+  max-width: 100%;
+
   }
